@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center">Request Service</h1>
+
+<form method="POST" action="{{ url_for('service_request', service_id=service_id) }}">
+    <div class="form-group">
+        <label for="remarks">Additional Remarks</label>
+        <textarea class="form-control" id="remarks" name="remarks" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Submit Request</button>
+</form>
+{% endblock %}

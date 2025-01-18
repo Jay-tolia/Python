@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Admin Dashboard</h1>
+
+    <!-- Users Section -->
+    <div class="card mt-4">
+        <div class="card-header">Users</div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.role }}</td>
+                            <td>
+                                {% if user.role != 'admin' %}
+                                <form action="{{ url_for('delete_user') }}" method="POST">
+                                    <input type="hidden" name="user_id" value="{{ user.id }}">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                                
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Existing Services Section -->
+    <div class="card mt-4">
+        <div class="card-header">Existing Services</div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">Plumbing</li>
+                <li class="list-group-item">Electrician</li>
+                <li class="list-group-item">House Cleaning</li>
+                <li class="list-group-item">Gardening</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Professionals Section -->
+    <div class="card mt-4">
+        <div class="card-header">Professionals</div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Skill</th>
+                        <th>Experience</th>
+                        <th>Contact</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for professional in professionals %}
+                        <tr>
+                            <td>{{ professional.name }}</td>
+                            <td>{{ professional.skill }}</td>
+                            <td>{{ professional.experience }} years</td>
+                            <td>{{ professional.contact }}</td>
+                            <td>
+                                <form action="{{ url_for('delete_professional') }}" method="POST">
+                                    <input type="hidden" name="professional_id" value="{{ professional.id }}">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                                
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

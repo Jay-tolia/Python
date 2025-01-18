@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Book {{ service_name }}{% endblock %}
+
+{% block content %}
+    <h2>Book {{ service_name }}</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="time_slot" class="form-label">Select a Time Slot</label>
+            <select class="form-select" id="time_slot" name="time_slot" required>
+                <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+                <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                <option value="1:00 PM - 2:00 PM">1:00 PM - 2:00 PM</option>
+                <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Confirm Booking</button>
+    </form>
+{% endblock %}

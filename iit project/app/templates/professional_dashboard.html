@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Professional Dashboard</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="alert alert-success" role="alert">
+                {% for category, message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <div class="card mt-4">
+        <div class="card-header">Submit Your Details</div>
+        <div class="card-body">
+            <form method="POST" action="{{ url_for('professional_dashboard') }}">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="skill" class="form-label">Skill</label>
+                    <select class="form-select" id="skill" name="skill" required>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="House Cleaning">House Cleaning</option>
+                        <option value="Gardening">Gardening</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="experience" class="form-label">Experience (in years)</label>
+                    <input type="number" class="form-control" id="experience" name="experience" min="0" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" id="contact" name="contact" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
