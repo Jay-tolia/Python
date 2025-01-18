@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Tolia Entrepreneurs Service</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header and navigation -->
+  <header class="header">
+    <div class="container">
+      <h1><a href="index.html">Tolia Entrepreneurs Service</a></h1>
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="legal.html">Legal Advice</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="startup-funding.html">Startup Funding</a></li>
+          <li><a href="co-working.html">Co-working Space</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-box">
+          <h3>Phone Number</h3>
+          <p>+1 (123) 456-7890</p>
+        </div>
+        <div class="contact-box">
+          <h3>Address</h3>
+          <p>123 Main Street, City, Country</p>
+        </div>
+        <div class="contact-box">
+          <h3>Email</h3>
+          <p>info@toliaentrepreneurs.com</p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h2>Get in Touch</h2>
+        <form id="contactForm" action="process.php" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 Tolia Entrepreneurs Service. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,819 @@
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+    position: relative;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  /* Active class for current slide */
+  .active {
+    transform: translateX(0);
+  }
+
+  /* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Carousel Styles */
+  .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+    position: relative;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  /* Animation Styles */
+  .animation {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .animation img {
+    width: 100px;
+    height: 100px;
+    animation: rotate 3s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Testimonial Styles */
+  .testimonial {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+  }
+  
+  .testimonial-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+/* Animation Styles */
+.animation {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .animation img {
+    width: 100px;
+    height: 100px;
+    animation: rotate 3s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animation h2 {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  
+  .animation p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  /* Testimonial Styles */
+.testimonial {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+  }
+  
+  .testimonial h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-card span {
+    font-weight: bold;
+  }
+  /* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex-basis: calc(25% - 20px);
+    margin-bottom: 30px;
+  }
+  
+  .footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    font-size: 14px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-form {
+    margin-top: 40px;
+  }
+  
+  .footer-form h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-form form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer-form input,
+  .footer-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .footer-form textarea {
+    height: 100px;
+  }
+  
+  .footer-form button {
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .footer-form button:hover {
+    background-color: #333;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  
+/* Image and Text Section Styles */
+.image-text-section {
+    padding: 40px 0;
+  }
+  
+  .image-text-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .image {
+    flex-basis: calc(50% - 20px);
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .text {
+    flex-basis: calc(50% - 20px);
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .text p {
+    font-size: 16px;
+  }
+/* Styles for Courses Page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.course-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.course-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 14px;
+}
+
+/* Styles for Header and Navigation */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: #ddd;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+/* Styles for Header and Navigation */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: #ddd;
+}
+
+/* Styles for About Us Page */
+/* Styles for About Us Page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.company-info,
+.team-members {
+  flex-basis: calc(50% - 20px);
+  margin-bottom: 40px;
+}
+
+.company-info h2,
+.team-members h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.team-member {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #f5f5f5;
+  flex-basis: calc(33.33% - 20px);
+}
+
+.team-member img {
+  max-width: 100%;
+  height: auto;
+}
+
+.team-member h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.team-member p {
+  font-size: 14px;
+}
+
+/* Additional styles for header, navigation, and footer */
+/* Styles for Contact Us Page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.contact-info {
+  flex-basis: 40%;
+}
+
+.contact-box {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-box h3 {
+  font-size: 18px;
+}
+
+.contact-box p {
+  margin-top: 10px;
+}
+
+.contact-form {
+  flex-basis: 55%;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.contact-form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #222;
+}
+
+/* Styles for Legal Advice Page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.legal-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.legal-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#legalForm label {
+  font-weight: bold;
+}
+
+#legalForm input,
+#legalForm textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#legalForm button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#legalForm button:hover {
+  background-color: #222;
+}
+
+/* Additional styles for header, navigation, and footer */
+/* Styles for Community Page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.community-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.community-form {
+  max-width: 400px;
+  width: 100%;
+}
+
+.community-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.community-form label {
+  font-weight: bold;
+}
+
+.community-form input,
+.community-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.community-form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.community-form button:hover {
+  background-color: #222;
+}
+
+.community-posts {
+  flex-basis: 55%;
+}
+
+.community-post {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.community-post h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.community-post p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Styles for Start-up Funding Page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.funding-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.funding-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+}
+
+.funding-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.funding-form label {
+  font-weight: bold;
+}
+
+.funding-form input,
+.funding-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.funding-form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.funding-form button:hover {
+  background-color: #222;
+}
+
+/* ... (previous CSS code) ... */
+
+.funding-projects {
+  margin-top: 40px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.project-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #f5f5f5;
+}
+
+.project-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-size: 14px;
+  margin: 0;
+}
+
+
+
+

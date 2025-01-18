@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start-up Funding - Tolia Entrepreneurs Service</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header and navigation -->
+  <header class="header">
+    <div class="container">
+      <h1><a href="index.html">Tolia Entrepreneurs Service</a></h1>
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="legal.html">Legal Advice</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="startup-funding.html">Startup Funding</a></li>
+          <li><a href="co-working.html">Co-working Space</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Start-up Funding</h1>
+    <div class="funding-content">
+      <div class="funding-form">
+        <h2>Request Funding</h2>
+        <form id="fundingForm" action="funding_process.php" method="POST">
+          <label for="companyName">Company Name:</label>
+          <input type="text" id="companyName" name="companyName" required>
+
+          <label for="mission">Mission:</label>
+          <textarea id="mission" name="mission" rows="4" required></textarea>
+
+          <label for="valuation">Valuation ($):</label>
+          <input type="number" id="valuation" name="valuation" required>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="funding-projects">
+    <h2>Featured Projects</h2>
+    <div class="project-list">
+      <!-- Project items will be dynamically added here -->
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 Tolia Entrepreneurs Service. All rights reserved.</p>
+    </div>
+  </footer>
+>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
