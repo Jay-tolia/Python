@@ -1,0 +1,19 @@
+<!-- templates/ocr.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Camera OCR{% endblock %}
+
+{% block content %}
+    <h1>Camera OCR</h1>
+    <div id="text-container"></div>
+    <script>
+        const eventSource = new EventSource('/video_feed');
+        const textContainer = document.getElementById('text-container');
+
+        eventSource.onmessage = function (event) {
+            const newText = event.data;
+            textContainer.innerText += newText;
+        };
+    </script>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div id="home">
+        <h1>Welcome to TEXTkRAFT</h1>
+        <p>Explore the power of text manipulation and analysis with TextCraft.</p>
+    </div>
+
+    <div id="text_extraction" class="mt-5">
+        <h2>Text Extraction from Picture</h2>
+        <p>This module utilizes image processing techniques to extract text from images using Optical Character Recognition (OCR).</p>
+        <a href="/text_extraction">Go to Text Extraction</a>
+    </div>
+
+    <div id="sentiment_analysis" class="mt-5">
+        <h2>Text Sentiment Analysis</h2>
+        <p>Utilize Natural Language Processing (NLP) techniques to analyze the sentiment of given text, categorizing emotions as positive, negative, or neutral.</p>
+        <a href="/sentiment_analysis">Go to Sentiment Analysis</a>
+    </div>
+
+    <div id="text_summarization" class="mt-5">
+        <h2>Text Summarization</h2>
+        <p>Generate concise and informative summaries of text using advanced natural language processing algorithms.</p>
+        <a href="/text_summarization">Go to Text Summarization</a>
+    </div>
+
+    <div id="language_converter" class="mt-5">
+        <h2>Language Converter</h2>
+        <p>Translate text from one language to another with ease. Supports various languages for multilingual communication.</p>
+        <a href="/language_converter">Go to Language Converter</a>
+    </div>
+
+    <div id="ocr" class="mt-5">
+        <h2>Camera OCR</h2>
+        <p>Real-time text recognition using your device's camera. Extract text from live video feed effortlessly.</p>
+        <a href="/ocr">Go to Camera OCR</a>
+    </div>
+{% endblock %}

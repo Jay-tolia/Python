@@ -1,0 +1,38 @@
+<!-- templates/language_converter.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Language Converter{% endblock %}
+
+{% block content %}
+    <h2 class="text-center">Language Converter</h2>
+    <form action="/translate" method="post">
+        <div class="form-group">
+            <textarea class="form-control" name="inputText" placeholder="Enter your text here"></textarea>
+        </div>
+        <div class="form-group">
+            <select class="form-control" name="languageSelector">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="mr">Marathi</option>
+                <option value="bn">Bengali</option>
+                <option value="te">Telugu</option>
+                <option value="ta">Tamil</option>
+                <option value="kn">Kannada</option>
+                <option value="gu">Gujarati</option>
+                <option value="ml">Malayalam</option>
+                <option value="pa">Punjabi</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Translate</button>
+    </form>
+    {% if translated_text %}
+        <div id="output" class="alert alert-success">
+            {{ translated_text }}
+        </div>
+    {% elif error %}
+        <div class="error">
+            {{ error }}
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Sentiment Analysis{% endblock %}
+
+{% block content %}
+    <div id="sentiment_analysis" class="mt-5">
+        <h2>Text Sentiment Analysis</h2>
+        <p>Utilize Natural Language Processing (NLP) techniques to analyze the sentiment of given text, categorizing emotions as positive, negative, or neutral.</p>
+
+        <!-- Form for sentiment analysis -->
+        <form method="post">
+            <label for="sentiment_text">Enter Text:</label>
+            <textarea id="sentiment_text" name="sentiment_text" rows="4" cols="50" required></textarea>
+
+            <br>
+
+            <button type="submit">Analyze Sentiment</button>
+        </form>
+
+        <!-- Display the result -->
+        {% if result %}
+            <p>Sentiment Analysis Result: {{ result }}</p>
+        {% endif %}
+    </div>
+{% endblock %}

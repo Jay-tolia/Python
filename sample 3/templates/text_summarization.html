@@ -1,0 +1,29 @@
+<!-- templates/text_summarization.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Text Summarizer{% endblock %}
+
+{% block content %} 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Summarizer</title>
+</head>
+<body>
+    <h1>Paragraph Summarizer</h1>
+    <form method="post">
+        <label for="paragraph">Enter Paragraph:</label><br>
+        <textarea name="paragraph" rows="5" cols="50">{{ paragraph }}</textarea><br>
+        <input type="submit" value="Summarize">
+    </form>
+    {% if summary %}
+        <h2>Summary:</h2>
+        <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
+
+<!--{% endblock %}-->
